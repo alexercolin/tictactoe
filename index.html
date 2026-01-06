@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha | Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Setup Screen -->
+    <div class="setup-screen" id="setupScreen">
+        <div class="setup-container">
+            <h1 class="setup-title">Jogo da Velha</h1>
+            
+            <div class="setup-section">
+                <h2 class="setup-subtitle">Escolha o Modo de Jogo</h2>
+                <div class="mode-selection">
+                    <button class="mode-btn active" id="modePlayer" data-mode="player">
+                        <span class="mode-icon">👥</span>
+                        <span class="mode-text">Vs Jogador</span>
+                    </button>
+                    <button class="mode-btn" id="modeAI" data-mode="ai">
+                        <span class="mode-icon">🤖</span>
+                        <span class="mode-text">Vs IA</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="setup-section">
+                <h2 class="setup-subtitle">Nomes dos Jogadores</h2>
+                <div class="name-inputs">
+                    <div class="input-group">
+                        <label for="playerXName" class="input-label player-x-label">Jogador X</label>
+                        <input type="text" id="playerXName" class="name-input" placeholder="Digite o nome" maxlength="15">
+                    </div>
+                    <div class="input-group" id="playerOGroup">
+                        <label for="playerOName" class="input-label player-o-label">Jogador O</label>
+                        <input type="text" id="playerOName" class="name-input" placeholder="Digite o nome" maxlength="15">
+                    </div>
+                </div>
+            </div>
+
+            <div class="setup-section">
+                <button class="btn btn-start" id="startGameBtn">Começar Jogo</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div class="container" id="gameScreen" style="display: none;">
+        <header class="header">
+            <h1 class="title">Jogo da Velha</h1>
+            <div class="score-board">
+                <div class="score-item">
+                    <span class="score-label" id="scoreLabelX">Jogador X</span>
+                    <span class="score-value" id="scoreX">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="score-label">Empates</span>
+                    <span class="score-value" id="scoreDraw">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="score-label" id="scoreLabelO">Jogador O</span>
+                    <span class="score-value" id="scoreO">0</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="game-container">
+            <div class="game-info">
+                <p class="current-player">
+                    Vez de: <span id="currentPlayerDisplay" class="player-mark">X</span>
+                </p>
+            </div>
+
+            <div class="board" id="board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+
+            <div class="controls">
+                <button class="btn btn-primary" id="resetBtn">Novo Jogo</button>
+                <button class="btn btn-secondary" id="resetScoreBtn">Zerar Placar</button>
+                <button class="btn btn-secondary" id="backToSetupBtn">Mudar Modo</button>
+            </div>
+        </main>
+
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <h2 class="modal-title" id="modalTitle">Fim de Jogo!</h2>
+                <p class="modal-message" id="modalMessage"></p>
+                <button class="btn btn-primary" id="modalBtn">Jogar Novamente</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
