@@ -3,7 +3,7 @@
  * Clean architecture with separation of concerns
  */
 
-// ===== Game Configuration =====
+// ===== Game Configuration ======
 class GameConfig {
   constructor() {
     this.mode = "player"; // 'player' or 'ai'
