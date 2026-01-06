@@ -235,7 +235,7 @@ Desenvolvido seguindo os melhores padrões de:
 - Mobile-First Design
 - Progressive Enhancement
 
----
+----
 
 **Divirta-se jogando! 🎮✨**
 
